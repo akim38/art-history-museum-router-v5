@@ -21,7 +21,7 @@ const GalleryView = ({ galleries }) => {
     return (
         <>
             <h2>{chosenGall.name}</h2>
-            <Route path={`/galleries/${galleryId}`}>
+            <Route exact path={`/galleries/${galleryId}`}>
                 {artList.map((art) => (
                     <span key={art.id}>
                         <ArtImageTile art={art} galleryId={chosenGall.id}/>
